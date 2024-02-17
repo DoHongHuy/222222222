@@ -1,0 +1,434 @@
+<html lang="vi" class="fontSideMbCp">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>THẦN TÀI LÌ XÌ - THANTAI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="jquery.js"></script>
+    <script src="java.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    *,
+    ::after,
+    ::before {
+        box-sizing: content-box;
+    }
+
+    p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+</style>
+
+<body id="wrap" class="wrap">
+    <div id="lucky-money-container" class="lucky-money-container"></div>
+    <div class="weMb">
+        <nav class="clearfix">
+            <ul class="clearfix">
+                <li>
+                    <a href="/">
+                        <img alt="diễn đàn" src="images/nav-home.png">
+                        <span>Diễn
+                            Đàn</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="o">
+                        <img alt="trực tiếp xổ số" src="images/nav-stream.png">
+                        <span>Trực
+                            Tiếp</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img alt="event" src="images/nav-event.png">
+                        <span>Event</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" onclick="showDialog('#queryDialog');">
+                        <img alt="rút thưởng" src="images/nav-money.png">
+                        <span>Rút Thưởng</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <div class="banner">
+                <img alt="banner" src="images/banner.jpg">
+                <div class="time">
+                    <dl>
+                        <dt>
+                            <strong id="div_title" style="font-size: 14px; letter-spacing: 0">BẮT ĐẦU SAU</strong>
+                        </dt>
+                        <dd style="font-size: 14px">
+                            <div>
+                                <span id="hours"> </span>GIỜ
+                                <span id="minutes"> </span>PHÚT
+                                <span id="seconds"> </span>GIÂY
+                            </div>
+                        </dd>
+                    </dl>
+                    <div id="div_left">
+                        Tổng giải thưởng <span id="leftred">00000000</span>
+                        VNĐ
+                    </div>
+                </div>
+            </div>
+            <div class="mingdan">
+                <h1 class="tit">TOP ĐOẠT LÌ XÌ</h1>
+                <div class="box mingdan">
+                    <div class="box2">
+                        <div class="dowebok str_wrap str_vertical">
+                            <div class="str_move str_origin" style="top: -28.5px;">
+                                <ul class="clearfix cy_up_ul">
+                                    <div id="showAllListCustomerLucky" class="showAllListCustomerLucky"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-detail">
+                <a href="">
+                    <img src="images/view-txt.png" alt="Chi tiết sự kiện" title="Chi tiết sự kiện">
+                </a>
+                <h2 style="display: none">Chi tiết sự kiện</h2>
+            </div>
+            <div class="black_bg" id="dialogBg"></div>
+        </div>
+    </div>
+    <div class="weCp">
+        <div class="header">
+            <ul class="clearfix">
+                <li><a target="_blank" href="/">Diễn đàn</a></li>
+                <li><a target="_blank" href="">Trực tiếp</a></li>
+                <li><a target="_blank" href="">Game dự
+                        đoán</a></li>
+                <li>
+                    <a type="button" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modalLogin"
+                        onclick="handerOpenModalLogin()">Đăng nhập</a>
+                </li>
+            </ul>
+        </div>
+        <div class="banner">
+            <div class="time">
+                <dl>
+                    <dt><strong id="div_title">BẮT ĐẦU SAU</strong></dt>
+                    <div>
+                        <dd><span id="remainingHourCp">
+
+                            </span>GIỜ<span id="remainingMinuteCp">
+
+                            </span>PHÚT<span id="remainingSecondCP">
+
+                            </span>GIÂY</dd>
+                    </div>
+                    </dd>
+                </dl>
+                <div id="div_left">Tổng giải thưởng <span id="leftred">00000000</span>VNĐ</div>
+            </div>
+        </div>
+
+        <div class="w1000">
+            <h1 class="tit">TOP ĐOẠT LÌ XÌ</h1>
+            <div class="box mingdan">
+                <!--Top start-->
+                <div class="dowebok str_wrap str_vertical">
+                    <div class="str_move str_origin" style="top: -124.85px;">
+                        <ul class="clearfix cy_up_ul">
+                            <div id="showAllListCustomerLuckyCp" class="showAllListCustomerLuckyCp">
+                            </div>
+                    </div>
+                </div>
+                <script>
+                </script>
+                <!--Top end-->
+            </div>
+            <div class="box-foot"></div>
+
+            <h2 class="tit">NỘI DUNG SỰ KIỆN</h2>
+            <div class="box box-txt" id="info1">
+                <font size="4">Đối tượng tham gia：Tất cả thành viên<br>
+                    Thời gian bắt đầu sự kiện：Từ 05/09/2023<br>Thời gian kết thúc sự kiện：??/??/????<br>
+                    Kết duyên tại diễn đàn Thần Tài [thantai]. Sau khi truy cập trang web, các bạn hoàn thành các
+                    bước tạo tài khoản và điền đầy đủ thông tinh cá nhân đều có thể tham dự <strong>“MỖI NGÀY 3 ĐỢT THẦN
+                        TÀI LÌ XÌ”</strong>. Chỉ cần vào các mốc thời gian <strong>16:15, 17:15, 18:15</strong> truy cập
+                    vào diễn đàn thần tài [ thantai] có thể tham dự đoạt lì xì. Số lượng lì xì có hạn, Thành viên
+                    may mắn nhất có thể đoạt được 39.039 VNĐ! Vừa xem kết quả xổ số vừa nhận lì xì. Nhanh tay chia sẻ
+                    niềm vui hiếm có này đến với mọi người xung quanh bạn!</font>
+                <p></p>
+                <table width="100%" border="1">
+                    <thead>
+                        <tr>
+                            <th width="13%">
+                                <font size="4">Tổng giải thưởng</font>
+                            </th>
+                            <th width="13%">
+                                <font size="4">Các đợt mở lì xì</font>
+                            </th>
+                            <th width="13%">
+                                <font size="4">Giá trị mỗi lì xì (Ngẫu nhiên)</font>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3" width="13%">
+                                <p align="center">
+                                    <font size="4" color="#FF0000">
+                                        <span>Tổng giải thưởng mỗi đợt</span>
+                                    </font><span style="color: #ff0000; ; ">
+                                        <font size="4"><br></font>
+                                    </span>
+                                    <font size="4" color="#FF0000">
+                                        <span>7.999.999đ 🧧</span>
+                                    </font>
+                                </p>
+                            </td>
+                            <td width="13%" align="center">
+                                <span style="background-color: #FFFFFF">
+                                    <font size="4">
+                                        <span>16:15 - 16:30</span>
+                                    </font>
+                                </span>
+                            </td>
+                            <td rowspan="3" width="13%">
+                                <p align="center">
+                                    <span
+                                        style="box-sizing:border-box; color:#ff0000; font-style:normal; font-variant-ligatures:normal; font-variant-caps:normal; letter-spacing:normal; orphans:2; text-align:center; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px; -webkit-text-stroke-width:0px; text-decoration-style:initial; text-decoration-color:initial; background-color:#ffffff">
+                                        <font size="4">500đ - 39.039đ 🧧</font>
+                                    </span>
+                                </p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td width="13%" align="center">
+                                <span style="background-color: #FFFFFF">
+                                    <font size="4">
+                                        <span>17:15 - 17:30</span>
+                                    </font>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="13%" align="center">
+                                <span style="background-color: #FFFFFF">
+                                    <font size="4">
+                                        <span>18:15 - 18:30</span>
+                                    </font>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3">
+                                <font size="4">
+                                    Mỗi ngày có 3 đợt đoạt lì xì - Hãy chuẩn bị đăng nhập tài khoản trước khi đoạt lì
+                                    xì.</font>
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="box-foot"></div>
+            <h2 class="tit">QUY TẮC SỰ KIỆN</h2>
+            <div class="box box-txt" id="info2">
+                <p>
+                    <font size="4">1. Thành viên tham gia đoạt lì xì với số lượng đông trong khi số lượng lì xì có hạn.
+                        Thành viên không đạt được lì xì có thể đợi đợt phát lì xì tiếp theo trong ngày hoặc vào ngày hôm
+                        sau.</font>
+                </p>
+                <p>
+                    <font size="4">2. Xu từ lì xì sẽ được cộng thẳng vào tài khoản diễn đàn của bạn.</font>
+                </p>
+                <p>
+                    <font size="4">3. Thời gian hoạt động lì xì này có hạn, không cố định thời gian mở và kết thúc hoạt
+                        động. Chỉ cần vào lúc 16:15,17:15,18:15 truy cập diễn đàn đều có thể tham dư.</font>
+                </p>
+                <p>
+                    <font size="4">
+                        4. Xu từ lì xì là ngẫu nhiên, giá trị một bao lì xì cao nhất là 39.039 VNĐ (tỉ lệ cực thấp). Do
+                        thần tài lì xì số lượng có hạn, góp ý bạn trước giờ lì xì đăng nhập tài khoản chuẩn bị tốt.
+                    </font>
+                </p>
+                <p>
+                    <font size="4">
+                        5. Hoạt động này được lập trình tự động, giá trị của lì xì tuân thủ theo xác suất nhẫu nhiên.
+                        Không có bất kỳ sự tham gia nào của con người. Giá trị của lì xì tùy thuộc vào tính toán của hệ
+                        thống, không được tranh cãi.</font>
+                </p>
+                <p>
+                    <font size="4">6. Tránh sự khác biệt trong việc nắm bắt nội dung văn bản, diễn đàn Thần Tài sẽ là
+                        người đưa ra quyết định cuối cùng trong hoạt động khuyến mãi này.</font>
+                </p>
+                <p>
+                    <font size="4">7. Khi tham gia sự kiện này, đồng nghĩa bạn đồng ý《Điều khoản và quy tắc của sự
+                        kiện》.</font>
+                </p>
+                <p>
+                    <font size="4">8. Những quy tắc và phần thưởng của sự kiện này có thể thay đổi theo thời gian để phù
+                        hợp với tình hình thực tế. Hãy thường xuyên theo dõi để cập nhật.</font>
+                </p>
+            </div>
+            <div class="box-foot"></div>
+        </div>
+        <div class="footer">Copyright © 2023 THANTAI.COM All Rights Reserved</div>
+        <!--Draw start-->
+        <div class="hongbao1 dialog flip" id="hbDialog" style="z-index:1000002 ">
+            <span class="hongbao1_colse closeDialog1"></span>
+            <span class="hongbao1_chai" id="draw">Mở lì xì</span>
+        </div>
+        <!--Draw end-->
+        <div class="black_bg" id="dialogBg"></div>
+    </div>
+    <!-- Modal Notification lucky-->
+    <div class="modal fade" id="modalResutCheck" tabindex="-1" role="dialog" aria-labelledby="modalResutCheck"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content contentModalLuckyMoney">
+                <div class="modal-header">
+                    <div class="modal-body parent">
+                        <div class=""><span class="luckyMoneyAc"></span></div>
+                        <div class="showSweepstakes">
+                            <button type="button" class="child1" style="background-color: rgb(248, 224, 6);"
+                                onclick="btnLucky()">
+                                Mở lì xì
+                            </button>
+                            <div class="notYesMoneyAcount">
+                            </div>
+                        </div>
+                        <div class="hongbao1 dialog ssssssaaaa" id="resultDialog" style="z-index:1000002 ">
+                            <span class="hongbao2_colse closeDialog1"></span>
+                            <div class="hongbao_s"><em id="">0.00</em></div>
+                            <div class="">🧧<span id="resultTimes">0</span>🧧</div>
+                            <div class="hongbao_btn closeDialog1"><span>Đóng</span></div>
+                        </div>
+                    </div>
+                    <button type="button" class="close chillclose" data-bs-toggle="modal" data-bs-target="#">
+                        <span aria-hidden="false">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Modal Notification lucky  -->
+    <!--Result start-->
+    <div class="hongbao1 dialog" id="resultDialog" style="z-index:1000002 ;">
+        <span class="hongbao2_colse closeDialog1"></span>
+        <div class="hongbao_s"><em id="">0.00</em></div>
+        <div class="">🧧<span id="resultTimes">0</span>🧧</div>
+        <div class="hongbao_btn closeDialog1"><span>Đóng</span></div>
+    </div>
+    <!--Result end-->
+    <!-- Modal  Login-->
+    <div class="modal fade modalLogin" id="modalLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog dialogModalLogin">
+            <div class="modal-content contentModalLogin">
+                <div class="modal-header headerModalLogin">
+                    <button type="button" class=" closeDialog3 closeLogin" data-bs-dismiss="modal" aria-label="Close">
+
+                    </button>
+                </div>
+                <div class="modal-body bodyModalLogin">
+                    <div class="hb_sr">
+                        <form id="form-login" method="POST" action="#">
+                            <input type="hidden" name="_token" value="SCzuU6mrFpKErCANpYCGWEVPGgKF6PE6yBBlETuc">
+                            <span style="    position: absolute;
+                            margin-top: -48px;
+                            margin-left: 72px;
+                        "> ĐĂNG NHẬP</span>
+                            <input type="text" name="username" id="username" placeholder="Tên đăng nhập">
+                            <input type="password" name="password" id="password" placeholder="Mật khẩu">
+                        </form>
+                    </div>
+                    <div class="hb_sr2">
+                        <a href="" id="check"></a>
+                        <div class="login_method">
+                            Đăng nhập bằng
+                            <a href=""><img src="images/google.png" alt="login with google" width="24" height="24"></a>
+                        </div>
+                        <div>
+                            <a class="register" data-bs-toggle="modal" data-bs-target="#modalRegister"
+                                onclick="openModalRegister()">
+                                Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal login -->
+    <!-- Modal  register-->
+    <div class="modal fade modalRegister" id="modalRegister" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content contentModalRegister">
+                <div class="modal-header headerRegister">
+                    <form style="width: 128%;    color: #4b3c1a ;   font-family: cursive, sans-serif;">
+                        <div class="mb-12 ">
+                            <!-- <label or="exampleInputEmail1" class="form-label">Tên đăng nhập</label> -->
+                            <label for="inputName" class="form-label"> Tên đăng nhập</label>
+                            <input placeholder="Tên đăng nhập" type="" class="form-control"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-12   ">
+                            <label for="" class="form-label">Địa chỉ email</label>
+                            <input placeholder="Địa chỉ email" type="" class="form-control" 
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class=" form-label">Mật khẩu</label>
+                            <input placeholder="***" type="password" class="form-control" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Xác nhận lại mật khẩu</label>
+                            <input placeholder="***" type="password" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-danger btnSubmit h1"> ĐĂNG KÝ</button>
+                        <div class="mb-3 my-2">
+                            <span>Bạn đã có tài khoản? <a href="" class="">Đăng
+                                    nhập</a> <span>hoặc </span> <a href=""><img src="images/google.png" width="24"
+                                        height="24"></a></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <a type="button" href="/" class="btn btn-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M4 8L3.29289 8.70711L2.58579 8L3.29289 7.29289L4 8ZM9 20C8.44772 20 8 19.5523 8 19C8 18.4477 8.44772 18 9 18L9 20ZM8.29289 13.7071L3.29289 8.70711L4.70711 7.29289L9.70711 12.2929L8.29289 13.7071ZM3.29289 7.29289L8.29289 2.29289L9.70711 3.70711L4.70711 8.70711L3.29289 7.29289ZM4 7L14.5 7L14.5 9L4 9L4 7ZM14.5 20L9 20L9 18L14.5 18L14.5 20ZM21 13.5C21 17.0898 18.0898 20 14.5 20L14.5 18C16.9853 18 19 15.9853 19 13.5L21 13.5ZM14.5 7C18.0899 7 21 9.91015 21 13.5L19 13.5C19 11.0147 16.9853 9 14.5 9L14.5 7Z"
+                                        fill="#4335E8"></path>
+                                </svg>
+                                Quay về TRANG CHỦ</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- end modal register -->
+</body>
+<script>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+</html>
